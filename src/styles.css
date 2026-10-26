@@ -507,3 +507,7 @@ main.wrap { padding-top: 5rem; }
   .cast .story { font-size: clamp(.85rem, min(1.7vh, 1.25vw), 1.1rem); line-height: 1.4; margin-top: .35rem; }
   .car-nav button { width: 48px; height: 48px; }
 }
+@media (min-width: 901px) {
+  .stage > .carousel { width: min(100%, max(36rem, calc(64vw - var(--gx)))); display: flex; flex-direction: column; }
+  .car-nav { order: 2; justify-content: flex-start; margin: 16px 0 0; }
+}
