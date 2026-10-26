@@ -220,6 +220,15 @@ For the in-app celebration (Rive). Generate on a plain blush background, remove 
 
 Rules for the celebration: it marks effort, not eating. Do not generate a clean-plate pose, a trophy pose or any pose with food in hand. "Tasting" is a curious tilt only. Start with Pip in all four poses, then repeat for the other four.
 
+### Rive-ready layers (app celebration)
+
+Rive animates layers, not one flat picture. Two tiers, do tier 1 first:
+
+1. **Pose swap + squash (cheap, works with the four poses above).** In Rive, import the four pose PNGs as images, put them in one artboard, drive them with a state machine (idle, tasting, proud, wave) and animate scale/position (squash and stretch, bounce) plus a mesh on the body for a soft wobble. Every pose must share the same canvas size, the same feet position and the same body scale, or the swap will jump.
+2. **Parts for bone animation (richer).** Generate the same character as separate layers on flat green, then cut out: `body`, `eyes-open`, `eyes-closed`, `mouth-smile`, `mouth-open`, `arm-left`, `arm-right`, plus the `leaf`/`tendril` for each food. Prompt per part: `the {character} body only, no face, no arms, flat green background`, then `the same character's two eyes only` etc., with the approved character attached as the reference. Gemini rarely lines parts up exactly, so expect to nudge pieces in Rive or Photoshop.
+3. Deliver: transparent PNGs, 2048 px, same canvas per character, named `{id}-{part}.png` in `public/assets/rive/`. The Flutter app then loads one `.riv` per character with the `rive` package. Name state machine inputs `happy`, `tasting`, `proud`, `wave` (triggers).
+4. Celebration effects (spheres bursting) are built in Rive as shapes, not generated: reuse the glossy pink and lilac sphere look.
+
 ## 9. Manifest reference
 
 `public/assets/manifest.json`
