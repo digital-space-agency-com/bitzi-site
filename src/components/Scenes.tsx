@@ -62,7 +62,7 @@ export function Scenes({ l }: { l: Locale }) {
     });
     const html = document.documentElement;
     const onScroll = () => {
-      const last = document.querySelector("section.scene[data-scene=\"closing\"]");
+      const last = document.querySelector("section.scene.closing");
       html.classList.toggle("past-home", !!last && last.getBoundingClientRect().bottom < 90);
     };
     addEventListener("scroll", onScroll, { passive: true });
