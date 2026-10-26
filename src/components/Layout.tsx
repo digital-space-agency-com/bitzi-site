@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { en } from "../content/en";
 import { APP_STORE_URL, PLAY_STORE_URL } from "../site";
@@ -6,6 +6,9 @@ import { locales, type Page } from "../seo/pages";
 
 export function Layout({ page, children }: { page: Page; children: ReactNode }) {
   const l = locales.find((x) => x.lang === page.lang)!;
+  const [open, setOpen] = useState(false);
+  useEffect(() => { document.documentElement.classList.add("js"); }, []);
+  useEffect(() => setOpen(false), [page.path]);
   const homeLangs = page.alternates.filter((a) => a.hreflang !== "x-default");
   const nav = [
     { to: l.paths.home, label: l.ui.nav.home },
@@ -17,10 +20,10 @@ export function Layout({ page, children }: { page: Page; children: ReactNode }) 
   return (
     <>
       <a className="skip" href="#main">{l.ui.skip}</a>
-      <header className="site-header">
+      <header className={"site-header" + (open ? " menu-open" : "")}>
         <div className="bar">
           <div className="side">
-            <nav aria-label="Main">
+            <nav aria-label="Main" id="site-menu">
               <ul>
                 {nav.map((n) => (
                   <li key={n.to}><Link to={n.to} aria-current={n.to === page.path ? "page" : undefined}>{n.label}</Link></li>
@@ -32,6 +35,9 @@ export function Layout({ page, children }: { page: Page; children: ReactNode }) 
             Bit<span>zi</span>
           </Link>
           <div className="side end">
+            <button type="button" className="menu-btn" aria-expanded={open} aria-controls="site-menu" onClick={() => setOpen((o) => !o)}>
+              <span className="sr">{l.lang === "es" ? "Menú" : l.lang === "de" ? "Menü" : "Menu"}</span><i aria-hidden="true" />
+            </button>
             {homeLangs.length > 1 && (
               <nav aria-label={l.ui.languageLabel} className="langs">
                 <ul>
