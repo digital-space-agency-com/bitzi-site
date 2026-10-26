@@ -31,6 +31,8 @@ const scenes = {
   hero: "wide landscape, rolling moss-green felt hills in the lower third, three large glossy spheres at different depths (rose, lilac, butter yellow), puffy pink and white clouds, saturated blue sky, clear empty space centre-left for a headline",
   meet: "the same hills at dusk, slate and violet sky, soft glowing spheres, one large glossy pink-purple sphere on the right, open space across the middle",
   plate: "warm dusk sky, one big round felted plate seen from above on a moss hill, abstract soft colour zones in green, orange and cream, no food detail",
+  table: "night-blue felt hills, a single large softly glowing pink glass sphere high in the frame, cosy and quiet, empty foreground",
+  closing: "flying above a thick sea of cotton-wool clouds, bright sky-blue gradient to white at the horizon, one large glossy lilac-and-blush rounded-square card floating, no letters on it",
   chaining: "a swirling tunnel portal made of concentric felted rings in lilac, violet and blush, glowing centre, depth",
   celebration: "bright sky, felt hills, glossy spheres in rose, lilac and butter yellow bursting outward from the centre, joyful but calm",
 };

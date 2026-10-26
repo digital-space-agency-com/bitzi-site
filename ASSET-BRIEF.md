@@ -248,3 +248,25 @@ Rive animates layers, not one flat picture. Two tiers, do tier 1 first:
 - `mobile` is used under 700 px wide. `poster` shows before load, with reduced motion and with Data Saver.
 - Any slot with `enabled: false` (or missing) keeps its CSS placeholder.
 - Characters are decorative on the page (names and bios are real text), so the image alt stays empty.
+
+## Sheets (fewest generations)
+
+Generate sheets, not singles. One image = many assets. Slice with `scripts/slice-sheet.py` (removes the background, cuts each figure, centres on a 1024 px transparent square).
+
+Attach `art-drafts/char-pip-src.png` as the style reference to every sheet prompt.
+
+**Sheet A: cast (1 generation, 6 characters).** Names in reading order: pip, tomo, bram, pearl, sun, dot
+> Character sheet, 3 columns by 2 rows on a flat plain green (#00B140) background, generous empty space between figures. Same felted-wool toy style and the same simple face as the reference. Row 1: a pea pod, a tomato, a broccoli. Row 2: a pear, a small smiling sun with short rays, a pasta shell. Each figure whole, front view, standing, feet fully visible, nothing touching. No text, no labels, no shadows on the background.
+
+**Sheet B: poses, one per character (4 generations, 4 poses each).** Names: `pip-happy,pip-tasting,pip-proud,pip-wave` (and the same for tomo, bram, pearl, dot, sun)
+> Pose sheet, 2 columns by 2 rows on flat green (#00B140). The same pea pod character as the reference, four poses. Top row: happy (arms up, big smile), tasting (one tiny bite taken from a leaf, curious). Bottom row: proud (chest out, eyes closed, smile), wave (one arm waving). Same size in every cell, whole body visible, nothing touching, no text.
+
+Make one generation per character and slice with `--size 2048` for Rive.
+
+**Sheet C: scene stills (1 generation, 2 stills).** Slice by hand or crop in Preview; they are 16:9 so ask for two stacked.
+> Two wide landscape images stacked vertically, a thin white gap between. Top: night-blue needle-felted hills, one large softly glowing pink glass sphere high in the frame, cosy and quiet, empty foreground. Bottom: flying above a thick sea of cotton-wool clouds, sky-blue gradient to white at the horizon, one large glossy lilac-and-blush rounded-square card floating, no letters on it. Same felted-wool look as the reference. No text.
+
+**Sheet D: Rive parts (optional, 1 per character).** Names: body, arm-l, arm-r, leg-l, leg-r, eyes-open, eyes-closed, mouth-smile, mouth-open
+> Parts sheet on flat green: the pea pod character taken apart into separate pieces laid out in a grid, nothing touching: body without arms or legs, left arm, right arm, left leg, right leg, open eyes, closed eyes, smile, open mouth.
+
+Credit-saving rules: ask for 2 variants only when a sheet fails; if one figure is bad, regenerate the whole sheet rather than a single (style stays consistent); slice errors ("found N figures") mean two figures touch, so regenerate with more spacing.
