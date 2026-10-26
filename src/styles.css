@@ -476,11 +476,11 @@ main.wrap { padding-top: 5rem; }
 @media (min-width: 901px) {
   .stage > .carousel { width: min(72rem, calc(100% - var(--gx) * 2)); right: var(--gx); bottom: 5vh; }
   .car-nav button { width: 56px; height: 56px; font-size: 1.5rem; }
-  .cast { gap: 24px; padding: 56px 8px 20px 112px; }
-  .cast li { flex: 0 0 min(30rem, 46%); min-height: clamp(14rem, 34vh, 22rem); padding: 30px 30px 30px 138px; }
-  .cast .mini { left: -66px; bottom: 8px; font-size: clamp(24px, 3.4vh, 38px); }
-  .cast h3 { font-size: clamp(2rem, 4.2vh, 3rem); margin-bottom: .5rem; }
-  .cast p { font-size: clamp(1.05rem, 2.2vh, 1.4rem); line-height: 1.35; }
+  .cast { gap: 24px; padding: 56px 8px 20px clamp(80px, 8vw, 112px); }
+  .cast li { flex: 0 0 clamp(21rem, 36vw, 30rem); min-height: clamp(13rem, min(34vh, 24vw), 22rem); padding: 30px 84px 30px clamp(104px, 10vw, 138px); }
+  .cast .mini { left: calc(-1 * clamp(44px, 5vw, 66px)); bottom: 8px; font-size: clamp(20px, min(3.4vh, 2.6vw), 38px); }
+  .cast h3 { font-size: clamp(1.7rem, min(4.2vh, 3.2vw), 3rem); margin-bottom: .5rem; }
+  .cast p { font-size: clamp(1rem, min(2.2vh, 1.7vw), 1.4rem); line-height: 1.35; }
   .cast .go { width: 56px; height: 56px; right: 20px; top: 20px; font-size: 1.5rem; }
   .cast .go svg { width: 22px; height: 22px; }
 }
