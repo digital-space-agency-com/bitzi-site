@@ -62,6 +62,13 @@ export function Scenes({ l }: { l: Locale }) {
     });
     const html = document.documentElement;
     const onScroll = () => {
+      const meet = document.querySelector<HTMLElement>("section.meet");
+      const cast = meet?.querySelector<HTMLElement>("ul.cast");
+      if (meet && cast && html.classList.contains("scenes")) {
+        const p = parseFloat(getComputedStyle(meet).getPropertyValue("--p")) || 0;
+        const t = Math.min(1, Math.max(0, (p - 0.1) / 0.75));
+        cast.scrollLeft = t * (cast.scrollWidth - cast.clientWidth);
+      }
       const last = document.querySelector("section.scene.closing");
       html.classList.toggle("past-home", !!last && last.getBoundingClientRect().bottom < 90);
     };

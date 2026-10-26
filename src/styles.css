@@ -300,3 +300,4 @@ main.home { margin: -76px 12px 0; border-radius: 40px; overflow: clip; }
 .past-home .site-header { background: rgba(11, 28, 5, .86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding-bottom: 12px; }
 @media (max-width: 700px) { :root { --gx: 18px; } .stage > .carousel { right: auto; width: 100%; } .scene h2 { font-size: 2.1rem; } .hero .lede, .meet-copy > p, .scene .copy p { font-size: 1rem; } }
 @media (max-width: 700px) { .hero .status { border-radius: 18px; padding: 6px 14px; line-height: 1.4; } }
+html.scenes .cast { scroll-snap-type: none; }
