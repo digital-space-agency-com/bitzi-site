@@ -3,7 +3,7 @@
   "version": 1,
   "scenes": {
     "hero": {
-      "enabled": false,
+      "enabled": true,
       "mode": "loop",
       "mp4": "scenes/hero.mp4",
       "webm": "scenes/hero.webm",
