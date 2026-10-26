@@ -497,3 +497,13 @@ main.wrap { padding-top: 5rem; }
 }
 @media (max-width: 900px) { .cast .story { font-size: .85rem; } }
 @media (min-width: 901px) { .meet .stage { align-content: start; padding-top: clamp(96px, 13vh, 150px); } }
+@media (min-width: 901px) {
+  .meet .stage { padding-top: clamp(84px, 10vh, 130px); }
+  .stage > .carousel { margin-top: .5rem; }
+  .cast { padding-top: 28px; padding-bottom: 8px; }
+  .cast li { min-height: 0; padding-top: 22px; padding-bottom: 22px; }
+  .cast h3 { font-size: clamp(1.6rem, min(3.6vh, 2.8vw), 2.6rem); margin-bottom: .3rem; }
+  .cast .bio { font-size: clamp(.95rem, min(2vh, 1.5vw), 1.3rem); line-height: 1.3; }
+  .cast .story { font-size: clamp(.85rem, min(1.7vh, 1.25vw), 1.1rem); line-height: 1.4; margin-top: .35rem; }
+  .car-nav button { width: 48px; height: 48px; }
+}
