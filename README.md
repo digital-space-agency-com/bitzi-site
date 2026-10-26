@@ -46,3 +46,7 @@ The home page is a sequence of scroll-scrubbed scenes (hills hero, meet the Bitz
 - `prefers-reduced-motion`, no-JS and prerendered HTML get a static stacked layout; Data Saver gets posters.
 - Prompts, filenames, resolutions and encoding commands: [ASSET-BRIEF.md](ASSET-BRIEF.md).
 - Not verified: the Dribbble reference video could not be opened in the browser pane (blocked by the permission classifier), so the look follows the written scene description, not frames of the video.
+
+## Look (second reference pass)
+
+The home page follows two reference frames: rounded frame on a blue-grey page, avatar-chip and pill nav with a centred wordmark, heavy white three-line headline with a small sun character, a horizontal trapezoid card carousel for the cast (prev/next buttons, character overlapping the card edge), and a vertical dot indicator whose active dot stretches into a bar. All art is a CSS placeholder until `public/assets/manifest.json` slots are enabled; see ASSET-BRIEF.md. The reference video itself was never opened.

@@ -15,6 +15,7 @@
     "tomo":  { "enabled": false, "src": "characters/tomo.webp",  "alt": "Tomo, a felted tomato" },
     "bram":  { "enabled": false, "src": "characters/bram.webp",  "alt": "Bram, a felted broccoli" },
     "pearl": { "enabled": false, "src": "characters/pearl.webp", "alt": "Pearl, a felted pear" },
+    "sun":   { "enabled": false, "src": "characters/sun.webp",   "alt": "A felted smiling sun" },
     "dot":   { "enabled": false, "src": "characters/dot.webp",   "alt": "Dot, a felted pasta shell" }
   }
 }

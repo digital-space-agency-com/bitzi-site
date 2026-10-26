@@ -42,11 +42,11 @@ export const en: Locale = {
         h: "Meet the Bitzis",
         p: "Five friendly food characters keep your child company at the table. They never ask for anything. They just turn up and cheer.",
         cast: [
-          { id: "pip", name: "Pip", bio: "A pea pod who is curious about everything on the plate." },
-          { id: "tomo", name: "Tomo", bio: "A round tomato who loves a good wave hello." },
-          { id: "bram", name: "Bram", bio: "A broccoli who likes to take things one small step at a time." },
-          { id: "pearl", name: "Pearl", bio: "A pear who is happiest sitting down with the whole family." },
-          { id: "dot", name: "Dot", bio: "A little pasta shell who cheers for every brave try." },
+          { id: "pip", name: "Pip", bio: "Climbs up to the table and takes a good look at everything on the plate." },
+          { id: "tomo", name: "Tomo", bio: "Waves hello to every food before sitting down." },
+          { id: "bram", name: "Bram", bio: "Tries one tiny bite, then takes a break. Small steps are fine." },
+          { id: "pearl", name: "Pearl", bio: "Sits down with the whole family and chats while the others try things." },
+          { id: "dot", name: "Dot", bio: "Waves goodbye to the plate when the meal is over, whatever happened." },
         ],
       },
       plate: {

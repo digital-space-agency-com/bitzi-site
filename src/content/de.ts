@@ -38,11 +38,11 @@ export const de: Locale = {
         h: "Triff die Bitzis",
         p: "Fünf freundliche Essensfiguren leisten deinem Kind am Tisch Gesellschaft. Sie verlangen nie etwas. Sie sind einfach da und feuern an.",
         cast: [
-          { id: "pip", name: "Pip", bio: "Eine Erbsenschote, die neugierig auf alles auf dem Teller ist." },
-          { id: "tomo", name: "Tomo", bio: "Eine runde Tomate, die gern winkt." },
-          { id: "bram", name: "Bram", bio: "Ein Brokkoli, der alles lieber Schritt für Schritt angeht." },
-          { id: "pearl", name: "Pearl", bio: "Eine Birne, die am liebsten mit der ganzen Familie am Tisch sitzt." },
-          { id: "dot", name: "Dot", bio: "Eine kleine Muschelnudel, die jeden mutigen Versuch anfeuert." },
+          { id: "pip", name: "Pip", bio: "Klettert an den Tisch und schaut sich in Ruhe alles auf dem Teller an." },
+          { id: "tomo", name: "Tomo", bio: "Winkt jedem Essen zu, bevor es sich hinsetzt." },
+          { id: "bram", name: "Bram", bio: "Probiert einen winzigen Bissen und macht dann Pause. Kleine Schritte sind okay." },
+          { id: "pearl", name: "Pearl", bio: "Setzt sich zur ganzen Familie und plaudert, während die anderen probieren." },
+          { id: "dot", name: "Dot", bio: "Winkt dem Teller zum Abschied, wenn die Mahlzeit vorbei ist, egal was passiert ist." },
         ],
       },
       plate: {

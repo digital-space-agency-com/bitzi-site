@@ -43,6 +43,13 @@ function Stores({ l }: { l: Locale }) {
   );
 }
 
+const PREV: Record<string, string> = { en: "Previous character", es: "Personaje anterior", de: "Vorherige Figur" };
+const NEXT: Record<string, string> = { en: "Next character", es: "Personaje siguiente", de: "Nächste Figur" };
+function slide(btn: HTMLElement, dir: number) {
+  const ul = btn.closest(".carousel")?.querySelector("ul");
+  if (ul) ul.scrollBy({ left: dir * (ul.clientWidth * 0.6), behavior: "smooth" });
+}
+
 export function Scenes({ l }: { l: Locale }) {
   const s = l.home.scenes;
   const [m, setM] = useState<Manifest | null>(null);
@@ -70,13 +77,14 @@ export function Scenes({ l }: { l: Locale }) {
         <div className="stage sky">
           <Media id="hero" m={m} />
           <div className="ph" aria-hidden="true">
-            <i className="cloud" style={{ ["--x" as string]: "8%", ["--y" as string]: "12%", ["--d" as string]: "-6" }} />
-            <i className="cloud" style={{ ["--x" as string]: "62%", ["--y" as string]: "6%", ["--d" as string]: "-10" }} />
+            <i className="cloud pink" style={{ ["--x" as string]: "-4%", ["--y" as string]: "-2%", ["--d" as string]: "-5" }} />
+            <i className="cloud pink" style={{ ["--x" as string]: "66%", ["--y" as string]: "-4%", ["--d" as string]: "-8" }} />
+            <i className="cloud" style={{ ["--x" as string]: "34%", ["--y" as string]: "14%", ["--d" as string]: "-6" }} />
             <i className="orb o1" /><i className="orb o2" /><i className="orb o3" />
             <i className="hill h1" /><i className="hill h2" /><i className="hill h3" />
           </div>
-          <div className="glass hero-panel">
-            <h1 id="h1">{l.home.h1}</h1>
+          <div className="hero-copy">
+            <h1 id="h1">{l.home.h1}<span className="sun-slot"><Char id="sun" m={m} /></span></h1>
             <p className="lede">{l.home.lede}</p>
             <p className="status">{l.ui.notReleased}</p>
             <p className="cta">
@@ -94,23 +102,28 @@ export function Scenes({ l }: { l: Locale }) {
         </div>
       </section>
 
-      <section id="meet" className={"scene meet" + has("meet")} data-scene style={{ ["--h" as string]: "260vh" }} aria-labelledby="meet-h">
-        <div className="stage sky night">
+      <section id="meet" className={"scene meet" + has("meet")} data-scene style={{ ["--h" as string]: "280vh", ["--n" as string]: s.meet.cast.length }} aria-labelledby="meet-h">
+        <div className="stage sky">
           <Media id="meet" m={m} />
-          <div className="ph" aria-hidden="true"><i className="hill h1" /><i className="hill h3" /><i className="orb o2" /></div>
-          <div className="cast-stage" aria-hidden="true">
-            {s.meet.cast.map((c, i) => (
-              <span key={c.id} className="float" style={{ ["--i" as string]: i }}><Char id={c.id} m={m} /></span>
-            ))}
+          <div className="ph" aria-hidden="true">
+            <i className="cloud pink" style={{ ["--x" as string]: "50%", ["--y" as string]: "-4%", ["--d" as string]: "-6" }} />
+            <i className="hill h1" /><i className="hill h3" /><i className="orb o2" /><i className="orb big" />
           </div>
           <div className="meet-copy">
             <h2 id="meet-h">{s.meet.h}</h2>
             <p>{s.meet.p}</p>
+          </div>
+          <div className="carousel">
+            <div className="car-nav">
+              <button type="button" aria-label={PREV[l.lang]} onClick={(e) => slide(e.currentTarget, -1)}>&#8592;</button>
+              <button type="button" aria-label={NEXT[l.lang]} onClick={(e) => slide(e.currentTarget, 1)}>&#8594;</button>
+            </div>
             <ul className="cast">
               {s.meet.cast.map((c, i) => (
-                <li key={c.id} style={{ ["--i" as string]: i }}>
+                <li key={c.id} className={`tone-${i % 4}`} style={{ ["--i" as string]: i }}>
                   <span className="mini"><Char id={c.id} m={m} /></span>
                   <div><h3>{c.name}</h3><p>{c.bio}</p></div>
+                  <span className="go" aria-hidden="true"><svg viewBox="0 0 12 12" width="14" height="14"><path d="M2 10 10 2M4 2h6v6" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg></span>
                 </li>
               ))}
             </ul>

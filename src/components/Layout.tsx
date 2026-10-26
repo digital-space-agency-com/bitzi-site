@@ -18,33 +18,45 @@ export function Layout({ page, children }: { page: Page; children: ReactNode }) 
     <>
       <a className="skip" href="#main">{l.ui.skip}</a>
       <header className="site-header">
-        <div className="wrap bar glass">
+        <div className="bar">
+          <div className="side">
+            <span className="chip" aria-hidden="true">B</span>
+            <nav aria-label="Main">
+              <ul>
+                {nav.slice(0, Math.ceil(nav.length / 2)).map((n) => (
+                  <li key={n.to}><Link to={n.to} aria-current={n.to === page.path ? "page" : undefined}>{n.label}</Link></li>
+                ))}
+              </ul>
+            </nav>
+          </div>
           <Link to={l.paths.home} className="brand" aria-label="Bitzi">
             Bit<span>zi</span>
           </Link>
-          <nav aria-label="Main">
-            <ul>
-              {nav.map((n) => (
-                <li key={n.to}><Link to={n.to}>{n.label}</Link></li>
-              ))}
-            </ul>
-          </nav>
-          {homeLangs.length > 1 && (
-            <nav aria-label={l.ui.languageLabel} className="langs">
+          <div className="side end">
+            <nav aria-label={l.ui.nav.home + " 2"}>
               <ul>
-                {homeLangs.map((a) => {
-                  const t = locales.find((x) => x.hreflang === a.hreflang)!;
-                  return (
-                    <li key={a.hreflang}>
-                      <a href={a.path} lang={t.htmlLang} hrefLang={a.hreflang} aria-current={t.lang === l.lang ? "true" : undefined}>
-                        {t.label}
-                      </a>
-                    </li>
-                  );
-                })}
+                {nav.slice(Math.ceil(nav.length / 2)).map((n) => (
+                  <li key={n.to}><Link to={n.to} aria-current={n.to === page.path ? "page" : undefined}>{n.label}</Link></li>
+                ))}
               </ul>
             </nav>
-          )}
+            {homeLangs.length > 1 && (
+              <nav aria-label={l.ui.languageLabel} className="langs">
+                <ul>
+                  {homeLangs.map((a) => {
+                    const t = locales.find((x) => x.hreflang === a.hreflang)!;
+                    return (
+                      <li key={a.hreflang}>
+                        <a href={a.path} lang={t.htmlLang} hrefLang={a.hreflang} aria-label={t.label} aria-current={t.lang === l.lang ? "true" : undefined}>
+                          {t.lang.toUpperCase()}
+                        </a>
+                      </li>
+                    );
+                  })}
+                </ul>
+              </nav>
+            )}
+          </div>
         </div>
       </header>
       <main id="main" className={page.kind === "home" ? "home" : "wrap"}>{children}</main>

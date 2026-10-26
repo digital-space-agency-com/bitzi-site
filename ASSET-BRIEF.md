@@ -79,14 +79,15 @@ Five original characters. Each has a one-line personality that never involves ea
 | `tomo` | Tomo | round felted tomato, warm red, little green leaf cap | friendly waver |
 | `bram` | Bram | felted broccoli, deep green, fluffy florets like a tree, stout stem body | steady, small steps |
 | `pearl` | Pearl | felted pear, butter-yellow, soft green blush, tiny stalk | sociable |
+| `sun` | Sunny | small felted smiling sun, butter-yellow, short soft rays | warm, tucked into the hero headline (tiny, about 3 cm tall in the layout) |
 | `dot` | Dot | felted pasta shell, cream with a pink inner swirl | cheerful |
 
-All have: two small black bead eyes, a small stitched smile, short stubby felted arms and legs, about the same height.
+All have: two big round glossy eyes with a white highlight, a small stitched smile, short stubby felted arms and legs, about the same height.
 
 Base prompt (Pip), after the style paragraph:
 
 ```
-full body character, a cute felted pea pod toy with three round peas peeking out of the top, two black bead eyes, small stitched smile, tiny stubby arms and legs, standing on a moss felt mound, plain soft blush background, centred, eye-level camera --ar 1:1 --v 7
+full body character, a cute wool-toy pea pod doll with three round peas peeking out of the top, two big round glossy eyes with a white highlight, small stitched smile, tiny stubby arms and legs, standing on a moss felt mound, plain soft blush background, centred, eye-level camera --ar 1:1 --v 7
 ```
 
 Swap the first clause for the other characters:
@@ -104,7 +105,7 @@ Swap the first clause for the other characters:
   - Check the current Midjourney docs: reference flags have changed between versions.
 - Generate on a plain `#E7D9E2` blush background first. Cut out the background in a second step (remove.bg, Photoshop or Firefly) for the transparent WebP.
 - Keep the same camera line in every prompt: `eye-level camera, 35mm lens`.
-- If faces drift, reuse the exact phrase: `two black bead eyes, small stitched smile`.
+- If faces drift, reuse the exact phrase: `two big round glossy eyes with a white highlight, small stitched smile`.
 - Reject any frame with teeth, tongue, eyebrows that look angry or sad, or hands holding food.
 
 ### Character delivery
@@ -112,6 +113,15 @@ Swap the first clause for the other characters:
 | File | Size | Format | Target |
 |---|---|---|---|
 | `public/assets/characters/pip.webp` (and tomo, bram, pearl, dot) | 1024 x 1024, transparent, subject centred with 8% margin | WebP, quality 85 | under 150 KB each |
+
+### Look update from the reference frames (supersedes conflicting lines above)
+
+- Characters read as **wool-toy dolls**: round faces, big shiny eyes with a white catch-light, slightly glossy highlights on top of the felt, soft rim light from behind. Keep the felted fibre texture.
+- Hills: speckled fuzzy moss felt with **tiny blue flowers** scattered over them. Spheres: several glossy pink and lilac spheres of varied size, one large hero sphere. Clouds: puffy pink and white. Sky: saturated blue.
+- Each character is delivered standing, full body, transparent background, so it can overlap the left edge of its trapezoid cast card. Cards themselves are built in CSS (pastel cream, blush, pale blue, grain texture); do not generate them.
+- Card bios (in the site copy) describe what each character does at the table: climbs up and looks, waves hello, tries one tiny bite, sits with the family, waves goodbye to the plate. Never about eating more or finishing.
+- Original cast only. Do not copy any character, name or logo from the Kazzoo reference. No star rows, ratings or review marks anywhere.
+- Add to every character prompt: `wool-toy doll, big round glossy eyes with a white highlight, soft rim light, tiny blue flowers on the ground`.
 
 ## 5. Image-to-video prompts (Runway Gen-4 or Kling)
 
@@ -199,7 +209,7 @@ Page weight budget: under 25 MB of video for the whole home page on desktop, und
 
 ## 8. Rive celebration poses (Flutter app, later)
 
-For the in-app celebration (Rive). Generate on a plain blush background, remove the background, deliver transparent PNG 2048x2048 under `public/assets/rive/{id}-{pose}.png`. Same felt look as the site characters, same face (`two black bead eyes, small stitched smile`).
+For the in-app celebration (Rive). Generate on a plain blush background, remove the background, deliver transparent PNG 2048x2048 under `public/assets/rive/{id}-{pose}.png`. Same felt look as the site characters, same face (`two big round glossy eyes with a white highlight, small stitched smile`).
 
 | Pose | Prompt addition |
 |---|---|

@@ -37,11 +37,11 @@ export const es: Locale = {
         h: "Conoce a los Bitzis",
         p: "Cinco simpáticos personajes de comida acompañan a tu hijo en la mesa. Nunca le piden nada: aparecen y animan.",
         cast: [
-          { id: "pip", name: "Pip", bio: "Una vaina de guisantes curiosa por todo lo que hay en el plato." },
-          { id: "tomo", name: "Tomo", bio: "Un tomate redondo al que le encanta saludar." },
-          { id: "bram", name: "Bram", bio: "Un brócoli que prefiere ir paso a paso." },
-          { id: "pearl", name: "Pearl", bio: "Una pera que es más feliz sentada con toda la familia." },
-          { id: "dot", name: "Dot", bio: "Una conchita de pasta que anima cada intento valiente." },
+          { id: "pip", name: "Pip", bio: "Se sube a la mesa y observa con calma todo lo que hay en el plato." },
+          { id: "tomo", name: "Tomo", bio: "Saluda a cada alimento antes de sentarse." },
+          { id: "bram", name: "Bram", bio: "Prueba un bocado diminuto y hace una pausa. Los pasos pequeños valen." },
+          { id: "pearl", name: "Pearl", bio: "Se sienta con toda la familia y charla mientras los demás prueban cosas." },
+          { id: "dot", name: "Dot", bio: "Se despide del plato cuando termina la comida, pase lo que pase." },
         ],
       },
       plate: {
