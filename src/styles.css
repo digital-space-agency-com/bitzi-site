@@ -186,7 +186,7 @@ thead th { background: var(--surface); }
   .cast li { padding: 6px 12px 6px 8px; border-radius: 18px; } .mini { font-size: 8px; }
   .plate-art { right: 50%; top: auto; bottom: 6%; transform: translate(50%, 0) rotate(calc(var(--p) * 25deg - 12deg)); width: 34vmin; }
   .plate .stage, .table .stage { align-content: start; padding-top: 110px; }
-  .phone-art { right: 50%; top: auto; bottom: 6%; transform: translateX(50%); width: 22vw; }
+  .phone-art { right: 50%; top: auto; bottom: 16%; transform: translateX(50%); width: 22vw; }
   .dots { right: 4px; } .dots a { width: 22px; height: 16px; }
   .closing .copy { margin-top: 30vh; }
 }
@@ -287,7 +287,7 @@ main.home { margin: -76px 12px 0; border-radius: 40px; overflow: clip; }
 .cast .mini .char.img { height: 6.4em; filter: drop-shadow(0 6px 8px rgba(11,28,5,.28)); }
 .cast { padding-left: 64px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 2%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 2%, #000 88%, transparent); }
 .cast li { padding-left: 74px; }
-.has-media .plate-art, .has-media .phone-art { display: none; }
+.has-media .plate-art { display: none; }
 
 /* tidy: shared gutter so header, copy and carousel line up */
 :root { --gx: max(28px, calc((100vw - 72rem) / 2 - 12px)); }
