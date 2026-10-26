@@ -40,7 +40,7 @@ export function Home({ page }: { page: Page }) {
         </section>
         <section>
           <h2>{h.limitsH}</h2>
-          <ul>{h.limits.map((x) => <li key={x}>{x}</li>)}</ul>
+          <ul className="limit-pills">{h.limits.map((x) => <li key={x}>{x}</li>)}</ul>
         </section>
         <section>
           <h2>{h.faqH}</h2>
