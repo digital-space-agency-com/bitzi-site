@@ -42,11 +42,11 @@ export const en: Locale = {
         h: "Meet the Bitzis",
         p: "Five friendly food characters keep your child company at the table. They never ask for anything. They just turn up and cheer.",
         cast: [
-          { id: "pip", name: "Pip", bio: "Climbs up to the table and takes a good look at everything on the plate." },
-          { id: "tomo", name: "Tomo", bio: "Waves hello to every food before sitting down." },
-          { id: "bram", name: "Bram", bio: "Tries one tiny bite, then takes a break. Small steps are fine." },
-          { id: "pearl", name: "Pearl", bio: "Sits down with the whole family and chats while the others try things." },
-          { id: "dot", name: "Dot", bio: "Waves goodbye to the plate when the meal is over, whatever happened." },
+          { id: "pip", name: "Pip", bio: "Climbs up to the table and takes a good look at everything on the plate.", role: "The Looker", story: "Pip is a tiny pea pod who is curious about everything, and a little cautious too. Before anyone eats, Pip walks along the edge of the plate and has a good look. Looking counts. Some days that is all that happens, and Pip is proud of it anyway." },
+          { id: "tomo", name: "Tomo", bio: "Waves hello to every food before sitting down.", role: "The Greeter", story: "Tomo is round, red and very polite. Every food gets a wave and a hello, even the ones Tomo is not sure about yet. Saying hello is the first step, and Tomo reminds everyone there is no hurry to get to the second." },
+          { id: "bram", name: "Bram", bio: "Tries one tiny bite, then takes a break. Small steps are fine.", role: "The Nibbler", story: "Bram is a small broccoli with a big heart. One tiny bite, then a rest, then maybe another. Bram has learned that a small step is still a step, and that nobody at the table is counting." },
+          { id: "pearl", name: "Pearl", bio: "Sits down with the whole family and chats while the others try things.", role: "The Chatterbox", story: "Pearl loves a full table. She sits with the whole family, tells her stories and asks about everyone's day. While she chats, the plates get explored without anyone making a fuss about it." },
+          { id: "dot", name: "Dot", bio: "Waves goodbye to the plate when the meal is over, whatever happened.", role: "The Goodbye Wave", story: "Dot is a little pasta shell who closes every meal. However the meal went, Dot waves goodbye to the plate and says well done for sitting together. That is the moment the celebration begins." },
         ],
       },
       plate: {

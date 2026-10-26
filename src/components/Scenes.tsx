@@ -150,7 +150,7 @@ export function Scenes({ l }: { l: Locale }) {
               {s.meet.cast.map((c, i) => (
                 <li key={c.id} className={`tone-${i % 4}`} style={{ ["--i" as string]: i }}>
                   <span className="mini"><Char id={c.id} m={m} /></span>
-                  <div><h3>{c.name}</h3><p>{c.bio}</p></div>
+                  <div><span className="role">{c.role}</span><h3>{c.name}</h3><p className="bio">{c.bio}</p><p className="story">{c.story}</p></div>
                   <span className="go" aria-hidden="true"><svg viewBox="0 0 12 12" width="14" height="14"><path d="M2 10 10 2M4 2h6v6" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/></svg></span>
                 </li>
               ))}

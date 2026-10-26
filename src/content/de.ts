@@ -38,11 +38,11 @@ export const de: Locale = {
         h: "Triff die Bitzis",
         p: "Fünf freundliche Essensfiguren leisten deinem Kind am Tisch Gesellschaft. Sie verlangen nie etwas. Sie sind einfach da und feuern an.",
         cast: [
-          { id: "pip", name: "Pip", bio: "Klettert an den Tisch und schaut sich in Ruhe alles auf dem Teller an." },
-          { id: "tomo", name: "Tomo", bio: "Winkt jedem Essen zu, bevor es sich hinsetzt." },
-          { id: "bram", name: "Bram", bio: "Probiert einen winzigen Bissen und macht dann Pause. Kleine Schritte sind okay." },
-          { id: "pearl", name: "Pearl", bio: "Setzt sich zur ganzen Familie und plaudert, während die anderen probieren." },
-          { id: "dot", name: "Dot", bio: "Winkt dem Teller zum Abschied, wenn die Mahlzeit vorbei ist, egal was passiert ist." },
+          { id: "pip", name: "Pip", bio: "Klettert an den Tisch und schaut sich in Ruhe alles auf dem Teller an.", role: "Die Beobachterin", story: "Pip ist eine winzige Erbsenschote, neugierig auf alles und ein bisschen vorsichtig. Bevor jemand isst, spaziert Pip am Tellerrand entlang und schaut in Ruhe hin. Schauen zählt. An manchen Tagen passiert nur das, und Pip ist trotzdem stolz." },
+          { id: "tomo", name: "Tomo", bio: "Winkt jedem Essen zu, bevor es sich hinsetzt.", role: "Der Begrüßer", story: "Tomo ist rund, rot und sehr höflich. Jedes Essen bekommt ein Winken und ein Hallo, auch die, bei denen Tomo noch unsicher ist. Hallo sagen ist der erste Schritt, und Tomo erinnert alle daran, dass es keine Eile mit dem zweiten gibt." },
+          { id: "bram", name: "Bram", bio: "Probiert einen winzigen Bissen und macht dann Pause. Kleine Schritte sind okay.", role: "Der Knabberer", story: "Bram ist ein kleiner Brokkoli mit großem Herzen. Ein winziger Bissen, eine Pause, vielleicht noch einer. Bram hat gelernt, dass ein kleiner Schritt auch ein Schritt ist und dass am Tisch niemand mitzählt." },
+          { id: "pearl", name: "Pearl", bio: "Setzt sich zur ganzen Familie und plaudert, während die anderen probieren.", role: "Die Plaudertasche", story: "Pearl liebt einen vollen Tisch. Sie sitzt bei der ganzen Familie, erzählt ihre Geschichten und fragt nach dem Tag der anderen. Während sie plaudert, wird der Teller erkundet, ohne dass jemand ein Aufheben macht." },
+          { id: "dot", name: "Dot", bio: "Winkt dem Teller zum Abschied, wenn die Mahlzeit vorbei ist, egal was passiert ist.", role: "Das Abschiedswinken", story: "Dot ist eine kleine Nudelmuschel, die jede Mahlzeit beendet. Egal wie es lief, Dot winkt dem Teller zum Abschied und sagt danke fürs gemeinsame Sitzen. Das ist der Moment, in dem die Feier beginnt." },
         ],
       },
       plate: {

@@ -37,11 +37,11 @@ export const es: Locale = {
         h: "Conoce a los Bitzis",
         p: "Cinco simpáticos personajes de comida acompañan a tu hijo en la mesa. Nunca le piden nada: aparecen y animan.",
         cast: [
-          { id: "pip", name: "Pip", bio: "Se sube a la mesa y observa con calma todo lo que hay en el plato." },
-          { id: "tomo", name: "Tomo", bio: "Saluda a cada alimento antes de sentarse." },
-          { id: "bram", name: "Bram", bio: "Prueba un bocado diminuto y hace una pausa. Los pasos pequeños valen." },
-          { id: "pearl", name: "Pearl", bio: "Se sienta con toda la familia y charla mientras los demás prueban cosas." },
-          { id: "dot", name: "Dot", bio: "Se despide del plato cuando termina la comida, pase lo que pase." },
+          { id: "pip", name: "Pip", bio: "Se sube a la mesa y observa con calma todo lo que hay en el plato.", role: "La Observadora", story: "Pip es una vaina de guisante diminuta, curiosa y un poco prudente. Antes de que nadie coma, recorre el borde del plato y lo mira con calma. Mirar cuenta. Hay días en que solo pasa eso, y Pip se siente orgullosa igualmente." },
+          { id: "tomo", name: "Tomo", bio: "Saluda a cada alimento antes de sentarse.", role: "El Saludador", story: "Tomo es redondo, rojo y muy educado. Cada alimento recibe un saludo, incluso los que aún no le convencen. Decir hola es el primer paso, y Tomo recuerda a todos que no hay prisa por dar el segundo." },
+          { id: "bram", name: "Bram", bio: "Prueba un bocado diminuto y hace una pausa. Los pasos pequeños valen.", role: "El Probador", story: "Bram es un brócoli pequeño con un gran corazón. Un bocado diminuto, un descanso y quizá otro. Bram ha aprendido que un paso pequeño sigue siendo un paso y que nadie en la mesa está contando." },
+          { id: "pearl", name: "Pearl", bio: "Se sienta con toda la familia y charla mientras los demás prueban cosas.", role: "La Conversadora", story: "A Pearl le encanta la mesa llena. Se sienta con toda la familia, cuenta sus historias y pregunta por el día de cada uno. Mientras charla, los platos se exploran sin que nadie haga un drama." },
+          { id: "dot", name: "Dot", bio: "Se despide del plato cuando termina la comida, pase lo que pase.", role: "El Adiós", story: "Dot es una conchita de pasta que cierra cada comida. Salga como salga, se despide del plato y da las gracias por sentarse juntos. Ese es el momento en que empieza la celebración." },
         ],
       },
       plate: {

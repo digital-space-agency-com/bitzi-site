@@ -8,7 +8,7 @@ export type Scenes = {
   labels: Record<"hero" | "meet" | "plate" | "table" | "chaining" | "celebration" | "closing", string>;
   heroPrimary: string;
   heroSecondary: string;
-  meet: SceneCopy & { cast: { id: string; name: string; bio: string }[] };
+  meet: SceneCopy & { cast: { id: string; name: string; bio: string; role: string; story: string }[] };
   plate: SceneCopy;
   table: SceneCopy;
   chaining: SceneCopy & { chips: [string, string, string] };
