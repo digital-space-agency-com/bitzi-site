@@ -47,6 +47,9 @@ function head(page) {
     `<meta name="twitter:card" content="summary" />`,
     `<meta name="twitter:title" content="${title}" />`,
     `<meta name="twitter:description" content="${desc}" />`,
+    ...(page.kind === "home"
+      ? [`<link rel="preload" as="image" href="/assets/scenes/hero-wide.webp" imagesrcset="/assets/scenes/hero-wide-1024.webp 1024w, /assets/scenes/hero-wide.webp 1920w" imagesizes="100vw" fetchpriority="high" />`]
+      : []),
     ...page.jsonLd.map(jsonLd),
   ].join("\n    ");
 }

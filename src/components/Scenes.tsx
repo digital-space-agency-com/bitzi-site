@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import type { Locale } from "../content/types";
 import { APP_STORE_URL, PLAY_STORE_URL } from "../site";
-import { ASSET_BASE, loadManifest, type Manifest, type SceneId } from "../lib/manifest";
+import manifest from "../../public/assets/manifest.json";
+import { ASSET_BASE, type Manifest, type SceneId } from "../lib/manifest";
 import { startScrollEngine } from "../lib/scrollEngine";
 
 const ORDER: SceneId[] = ["hero", "meet", "plate", "table", "chaining", "celebration", "closing"];
@@ -10,10 +11,25 @@ const ORDER: SceneId[] = ["hero", "meet", "plate", "table", "chaining", "celebra
 function Media({ id, m }: { id: SceneId; m: Manifest | null }) {
   const e = m?.scenes[id];
   if (!e?.enabled) return null;
+  const poster = e.poster ? ASSET_BASE + e.poster : undefined;
+  if (e.mode === "still" || !e.mp4) {
+    if (!poster) return null;
+    const first = id === "hero";
+    return (
+      <img
+        className="media still"
+        src={poster}
+        srcSet={`${poster.replace(/\.webp$/, "-1024.webp")} 1024w, ${poster} 1920w`}
+        sizes="100vw"
+        alt=""
+        loading={first ? "eager" : "lazy"}
+        decoding={first ? "sync" : "async"}
+        fetchPriority={first ? "high" : "auto"}
+      />
+    );
+  }
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const small = matchMedia("(max-width: 700px)").matches;
-  const poster = e.poster ? ASSET_BASE + e.poster : undefined;
-  if (e.mode === "still" || !e.mp4) return poster ? <img className="media still" src={poster} alt="" /> : null;
   if (reduce || (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData) {
     return poster ? <img className="media" src={poster} alt="" /> : null;
   }
@@ -53,13 +69,10 @@ function slide(btn: HTMLElement, dir: number) {
 
 export function Scenes({ l }: { l: Locale }) {
   const s = l.home.scenes;
-  const [m, setM] = useState<Manifest | null>(null);
+  const m = manifest as Manifest;
   useEffect(() => {
     let stop = () => {};
-    loadManifest().then((x) => {
-      setM(x);
-      requestAnimationFrame(() => { stop = startScrollEngine(); });
-    });
+    requestAnimationFrame(() => { stop = startScrollEngine(); });
     const html = document.documentElement;
     const onScroll = () => {
       const meet = document.querySelector<HTMLElement>("section.meet");

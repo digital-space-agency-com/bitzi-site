@@ -5,37 +5,37 @@
     "hero": {
       "enabled": true,
       "mode": "still",
-      "poster": "scenes/hero-wide.jpg"
+      "poster": "scenes/hero-wide.webp"
     },
     "meet": {
       "enabled": true,
       "mode": "still",
-      "poster": "scenes/meet-poster.jpg"
+      "poster": "scenes/meet-poster.webp"
     },
     "plate": {
       "enabled": true,
       "mode": "still",
-      "poster": "scenes/plate-poster.jpg"
+      "poster": "scenes/plate-poster.webp"
     },
     "table": {
       "enabled": true,
       "mode": "still",
-      "poster": "scenes/table-poster.jpg"
+      "poster": "scenes/table-poster.webp"
     },
     "chaining": {
       "enabled": true,
       "mode": "still",
-      "poster": "scenes/chaining-poster.jpg"
+      "poster": "scenes/chaining-poster.webp"
     },
     "celebration": {
       "enabled": true,
       "mode": "still",
-      "poster": "scenes/celebration-poster.jpg"
+      "poster": "scenes/celebration-poster.webp"
     },
     "closing": {
       "enabled": true,
       "mode": "still",
-      "poster": "scenes/closing-poster.jpg"
+      "poster": "scenes/closing-poster.webp"
     }
   },
   "characters": {
