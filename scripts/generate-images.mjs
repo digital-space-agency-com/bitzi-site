@@ -14,6 +14,7 @@ const MODEL = process.env.GEMINI_IMAGE_MODEL || "gemini-2.5-flash-image";
 
 const STYLE = "handmade needle-felted wool toy look, visible fuzzy fibres and stitched seams, slightly glossy highlights, soft studio light with rim light, moss-green speckled felt hills with tiny blue flowers, glossy pink and lilac spheres, puffy pink and white clouds, saturated blue sky";
 const NEG = "No text, no letters, no logos, no people, no children, no faces of real people, no calorie or diet imagery, no trophies, no stars, no confetti, no emoji.";
+const CHAR_STYLE = "handmade needle-felted wool toy look, visible fuzzy fibres and stitched seams, slightly glossy highlights, soft studio light with rim light";
 const FACE = "wool-toy doll, round face, two big round glossy eyes with a white highlight, small stitched smile, short stubby arms and legs";
 const CHAR_BG = "full body, centred, standing, on a plain flat bright green (#00ff00) background with nothing else, so the background can be removed";
 
@@ -34,7 +35,7 @@ const scenes = {
 };
 const jobs = [
   ...Object.entries(chars).map(([id, d]) => ({ id: `char-${id}`, key: id, ratio: "1:1", ref: id !== "pip" ? "char-pip" : null,
-    prompt: `${d}. ${FACE}. ${CHAR_BG}. ${STYLE}. ${NEG}` })),
+    prompt: `${d}. ${FACE}. ${CHAR_BG}. ${CHAR_STYLE}. ${NEG}` })),
   ...Object.entries(scenes).map(([id, d]) => ({ id: `scene-${id}`, key: id, ratio: "16:9", ref: null, prompt: `${d}. ${STYLE}. ${NEG}` })),
 ].filter((j) => !only || only.includes(j.key));
 
