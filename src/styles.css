@@ -288,3 +288,15 @@ main.home { margin: -76px 12px 0; border-radius: 40px; overflow: clip; }
 .cast { padding-left: 64px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 2%, #000 88%, transparent); mask-image: linear-gradient(90deg, transparent, #000 2%, #000 88%, transparent); }
 .cast li { padding-left: 74px; }
 .has-media .plate-art, .has-media .phone-art { display: none; }
+
+/* tidy: shared gutter so header, copy and carousel line up */
+:root { --gx: max(28px, calc((100vw - 72rem) / 2 - 12px)); }
+.site-header .bar { margin-inline: auto; }
+.scenes .stage, .stage { padding-inline: var(--gx); }
+.stage > .carousel { right: var(--gx); width: min(46rem, calc(100% - var(--gx) * 2)); }
+.hero .lede, .meet-copy > p, .scene .copy p { font-size: 1.125rem; line-height: 1.55; }
+.scene h2 { font-size: clamp(2.2rem, 4.6vw, 3.4rem); line-height: 1; margin: 0 0 .6rem; letter-spacing: -.015em; }
+.site-header nav a, .site-header .langs a { line-height: 1.2; }
+.past-home .site-header { background: rgba(11, 28, 5, .86); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding-bottom: 12px; }
+@media (max-width: 700px) { :root { --gx: 18px; } .stage > .carousel { right: auto; width: 100%; } .scene h2 { font-size: 2.1rem; } .hero .lede, .meet-copy > p, .scene .copy p { font-size: 1rem; } }
+@media (max-width: 700px) { .hero .status { border-radius: 18px; padding: 6px 14px; line-height: 1.4; } }

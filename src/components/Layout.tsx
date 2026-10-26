@@ -62,7 +62,7 @@ export function Layout({ page, children }: { page: Page; children: ReactNode }) 
       <main id="main" className={page.kind === "home" ? "home" : "wrap"}>{children}</main>
       <footer className="site-footer">
         <div className="wrap">
-          <p><strong>{l.ui.footerTitle}</strong> {APP_STORE_URL || PLAY_STORE_URL ? null : l.ui.notReleased}</p>
+          <p>{APP_STORE_URL || PLAY_STORE_URL ? <strong>{l.ui.footerTitle}</strong> : <><strong>{l.ui.footerTitle}</strong>{" · "}{l.ui.notReleased}</>}</p>
           <p className="small">{l.ui.footerNote}</p>
           {l.ui.onlyEnglish && <p className="small">{l.ui.onlyEnglish}</p>}
           <p className="small">
