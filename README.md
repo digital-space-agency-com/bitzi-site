@@ -50,3 +50,14 @@ The home page is a sequence of scroll-scrubbed scenes (hills hero, meet the Bitz
 ## Look (second reference pass)
 
 The home page follows two reference frames: rounded frame on a blue-grey page, avatar-chip and pill nav with a centred wordmark, heavy white three-line headline with a small sun character, a horizontal trapezoid card carousel for the cast (prev/next buttons, character overlapping the card edge), and a vertical dot indicator whose active dot stretches into a bar. All art is a CSS placeholder until `public/assets/manifest.json` slots are enabled; see ASSET-BRIEF.md. The reference video itself was never opened.
+
+## Generating art with Gemini (Nano Banana)
+
+`scripts/generate-images.mjs` drafts the cast and scene stills into `art-drafts/` (git-ignored). Dry run by default.
+
+```bash
+GEMINI_API_KEY=... node scripts/generate-images.mjs --go --only pip   # approve Pip first
+GEMINI_API_KEY=... node scripts/generate-images.mjs --go --only tomo,bram,pearl,sun,dot,hero,meet,plate,chaining,celebration
+```
+
+Set `GEMINI_IMAGE_MODEL` to use a newer image model. Characters come back on flat green; remove the background (for example `rembg` or Photoshop), export 1024 px WebP under 150 KB to `public/assets/characters/`. Gemini does not output transparency or video: scene stills feed Runway/Kling per ASSET-BRIEF.md.
