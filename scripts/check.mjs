@@ -68,7 +68,7 @@ for (const [, { f, title, desc }] of meta) {
 }
 const sm = readFileSync(join(dist, "sitemap.xml"), "utf8");
 for (const c of meta.keys()) if (!sm.includes(`<loc>${c}</loc>`)) errs.push(`sitemap missing ${c}`);
-for (const f of ["robots.txt", "llms.txt", "favicon.svg"]) if (!existsSync(join(dist, f))) errs.push(`missing ${f}`);
+for (const f of ["robots.txt", "llms.txt", "favicon.ico", "apple-touch-icon.png"]) if (!existsSync(join(dist, f))) errs.push(`missing ${f}`);
 const faq = readFileSync(join(dist, "faq/index.html"), "utf8");
 if (!faq.includes('"FAQPage"')) errs.push("faq: FAQPage schema missing");
 const home = readFileSync(join(dist, "index.html"), "utf8");
