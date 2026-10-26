@@ -5,6 +5,7 @@
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { existsSync } from "node:fs";
 
+if (existsSync(".env.local")) for (const l of (await readFile(".env.local", "utf8")).split("\n")) { const m = l.match(/^\s*([A-Z_]+)\s*=\s*(.*)\s*$/); if (m && !process.env[m[1]]) process.env[m[1]] = m[2].replace(/^["']|["']$/g, ""); }
 const args = process.argv.slice(2);
 const go = args.includes("--go");
 const opt = (k, d) => (args.includes(k) ? args[args.indexOf(k) + 1] : d);
