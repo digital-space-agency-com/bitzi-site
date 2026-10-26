@@ -420,3 +420,54 @@ html.js .site-header.menu-open nav#site-menu { display: block; padding: 14px; bo
 .foot-card { padding: clamp(28px, 4vw, 48px) clamp(20px, 5vw, 56px); }
 .foot-cast { position: static; margin: 0 0 1rem; }
 .foot-card > :last-child { margin-bottom: 0; }
+
+/* inner pages: same coloured panels and pills as the home page */
+main.wrap, main.wrap > article { display: grid; gap: 1.25rem; align-content: start; }
+main.wrap { max-width: 72rem; width: calc(100% - 2 * (var(--fr) + var(--gm))); padding: 1.25rem 0 0; }
+main.wrap > * { margin: 0; min-width: 0; }
+.page-head { border-radius: 32px; padding: clamp(24px, 4.5vw, 52px); background: linear-gradient(135deg, #4d99f9 0%, #8f8ff0 55%, #f2cfe3 130%); color: var(--forest); }
+.page-head h1 { margin: 0 0 .6rem; color: #fff; text-shadow: 0 2px 0 rgba(11,28,5,.18); }
+.page-head .lede { color: var(--forest); max-width: 46rem; margin: 0; font-weight: 600; }
+.page-head .lede + .note { margin-top: 1rem; }
+.page-head .note { background: rgba(255,255,255,.55); border: 0; border-radius: 20px; color: var(--forest); }
+.page-head .crumbs { margin: 0 0 1rem; }
+main.wrap section, main.wrap .table-wrap { border-radius: 32px; padding: clamp(22px, 4vw, 44px); border: 1px solid var(--line); background: var(--surface); }
+main.wrap section h2 { margin: 0 0 .8rem; font-size: clamp(1.9rem, 4.4vw, 3rem); }
+main.wrap section > :last-child { margin-bottom: 0; }
+main.wrap section p, main.wrap section li { max-width: 52rem; }
+main.wrap section:nth-of-type(4n+1), main.wrap .table-wrap { background: linear-gradient(135deg, rgba(77,153,249,.28), rgba(205,189,247,.22)); border: 0; }
+main.wrap section:nth-of-type(4n+2) { background: linear-gradient(135deg, rgba(174,164,23,.26), rgba(242,207,227,.18)); border: 0; }
+main.wrap section:nth-of-type(4n+3) { background: linear-gradient(135deg, rgba(175,87,108,.26), rgba(120,133,170,.2)); border: 0; }
+main.wrap section:nth-of-type(4n) { background: linear-gradient(135deg, rgba(205,189,247,.28), rgba(77,153,249,.2)); border: 0; }
+main.wrap section ul:not(.more-links) { padding-left: 1.2rem; }
+main.wrap section li::marker { color: var(--sky); }
+main.wrap .more-links { padding: 0; margin: 1rem 0 0; }
+main.wrap .table-wrap { margin: 0; }
+main.wrap th, main.wrap td { border-color: rgba(255,255,255,.28); }
+main.wrap thead th { background: var(--pill); color: var(--forest); }
+main.wrap tbody th { color: inherit; }
+
+.guide-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); }
+.guide-list li { border-radius: 28px; padding: clamp(22px, 3.5vw, 36px); color: var(--forest); background: var(--pill); display: flex; flex-direction: column; align-items: flex-start; gap: .7rem; }
+.guide-list li:nth-child(4n+2) { background: linear-gradient(135deg, #cfe4ff, #a9c8ff); }
+.guide-list li:nth-child(4n+3) { background: linear-gradient(135deg, #efe8a0, #d8e3a0); }
+.guide-list li:nth-child(4n) { background: linear-gradient(135deg, #f6c9d2, #e9a9b8); }
+.guide-list h2 { margin: 0; font-size: clamp(1.7rem, 3.4vw, 2.3rem); }
+.guide-list h2 a { color: var(--forest); text-decoration: none; }
+.guide-list p { margin: 0; color: var(--forest); flex: 1; }
+.guide-list .pill-link { background: var(--forest); color: #fff; }
+.guide-list .pill-link::after { content: " →"; }
+.guide-list .pill-link:hover { background: #fff; color: var(--forest); }
+
+main.wrap > .faq { display: grid; gap: 12px; }
+main.wrap .faq details { margin: 0; border: 0; border-radius: 28px; padding: 0 clamp(20px, 3vw, 32px); color: var(--forest); background: var(--pill); }
+main.wrap .faq details:nth-child(4n+2) { background: linear-gradient(135deg, #cfe4ff, #a9c8ff); }
+main.wrap .faq details:nth-child(4n+3) { background: linear-gradient(135deg, #efe8a0, #d8e3a0); }
+main.wrap .faq details:nth-child(4n) { background: linear-gradient(135deg, #f6c9d2, #e9a9b8); }
+main.wrap .faq summary { list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; font-size: 1.15rem; font-weight: 800; cursor: pointer; }
+main.wrap .faq summary::-webkit-details-marker { display: none; }
+main.wrap .faq summary::after { content: "+"; flex: none; width: 36px; height: 36px; display: grid; place-items: center; border-radius: 50%; background: var(--forest); color: #fff; font-weight: 800; }
+main.wrap .faq details[open] summary::after { content: "–"; }
+main.wrap .faq p { color: var(--forest); max-width: 52rem; margin: 0 0 20px; }
+main.wrap { padding-top: 5rem; }
+@media (max-width: 700px) { main.wrap { padding-top: 4.5rem; } }

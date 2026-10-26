@@ -62,8 +62,7 @@ export function FaqPage({ page }: { page: Page }) {
   const l = loc(page);
   return (
     <>
-      <h1>{l.faq.h1}</h1>
-      <p className="lede">{l.faq.intro}</p>
+      <header className="page-head"><h1>{l.faq.h1}</h1><p className="lede">{l.faq.intro}</p></header>
       <FaqList items={l.faq.items} />
     </>
   );
@@ -73,8 +72,7 @@ export function PrivacyPage({ page }: { page: Page }) {
   const l = loc(page);
   return (
     <>
-      <h1>{l.privacy.h1}</h1>
-      <p className="small">{l.privacy.updated}</p>
+      <header className="page-head"><h1>{l.privacy.h1}</h1><p className="lede">{l.privacy.updated}</p></header>
       <Sections sections={l.privacy.sections} />
     </>
   );
@@ -83,9 +81,7 @@ export function PrivacyPage({ page }: { page: Page }) {
 export function ComparePage() {
   return (
     <>
-      <h1>{compare.h1}</h1>
-      <p className="lede">{compare.lede}</p>
-      <p className="note">{compare.disclosure}</p>
+      <header className="page-head"><h1>{compare.h1}</h1><p className="lede">{compare.lede}</p><p className="note">{compare.disclosure}</p></header>
       <div className="table-wrap">
         <table>
           <caption className="sr">Kinds of apps for fussy eaters and what each does</caption>
@@ -101,12 +97,16 @@ export function ComparePage() {
           </tbody>
         </table>
       </div>
-      <h2>{compare.howToChooseH}</h2>
-      <ul>{compare.howToChoose.map((x) => <li key={x}>{x}</li>)}</ul>
-      <p>{compare.closing}</p>
-      <ul>
-        {articles.map((a) => <li key={a.slug}><Link to={a.path}>{a.h1}</Link></li>)}
-      </ul>
+      <section>
+        <h2>{compare.howToChooseH}</h2>
+        <ul>{compare.howToChoose.map((x) => <li key={x}>{x}</li>)}</ul>
+      </section>
+      <section>
+        <p>{compare.closing}</p>
+        <ul className="more-links">
+          {articles.map((a) => <li key={a.slug}><Link to={a.path}>{a.h1}</Link></li>)}
+        </ul>
+      </section>
     </>
   );
 }
@@ -114,13 +114,13 @@ export function ComparePage() {
 export function GuidesPage() {
   return (
     <>
-      <h1>{guidesIndex.h1}</h1>
-      <p className="lede">{guidesIndex.lede}</p>
+      <header className="page-head"><h1>{guidesIndex.h1}</h1><p className="lede">{guidesIndex.lede}</p></header>
       <ul className="guide-list">
         {articles.map((a) => (
           <li key={a.slug}>
             <h2><Link to={a.path}>{a.h1}</Link></h2>
             <p>{a.lede}</p>
+            <Link className="pill-link" to={a.path}>Read the guide</Link>
           </li>
         ))}
       </ul>
@@ -132,9 +132,11 @@ export function ArticlePage({ page }: { page: Page }) {
   const a = articles.find((x) => x.slug === page.slug)!;
   return (
     <article>
-      <p className="crumbs"><Link to="/guides">Guides</Link></p>
-      <h1>{a.h1}</h1>
-      <p className="lede">{a.lede}</p>
+      <header className="page-head">
+        <p className="crumbs"><Link className="pill-link" to="/guides">← Guides</Link></p>
+        <h1>{a.h1}</h1>
+        <p className="lede">{a.lede}</p>
+      </header>
       <Sections sections={a.sections} />
       <section>
         <h2>Where Bitzi fits</h2>
@@ -142,7 +144,7 @@ export function ArticlePage({ page }: { page: Page }) {
       </section>
       <section>
         <h2>Sources</h2>
-        <ul>
+        <ul className="more-links">
           {a.sources.map((s) => (
             <li key={s.url}><a href={s.url} rel="noopener">{s.label}</a></li>
           ))}
