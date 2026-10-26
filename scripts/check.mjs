@@ -73,6 +73,8 @@ const faq = readFileSync(join(dist, "faq/index.html"), "utf8");
 if (!faq.includes('"FAQPage"')) errs.push("faq: FAQPage schema missing");
 const home = readFileSync(join(dist, "index.html"), "utf8");
 if (!/What is Bitzi\?/.test(home)) errs.push("home: definition block missing");
+for (const id of ["hero","meet","plate","table","chaining","celebration","closing"]) if (!home.includes(`id="${id}"`)) errs.push(`home: scene ${id} missing`);
+if (/<video/.test(home)) errs.push("home: video must be injected client-side, not prerendered");
 
 console.log(`${meta.size} pages checked`);
 if (errs.length) { console.error(errs.join("\n")); process.exit(1); }

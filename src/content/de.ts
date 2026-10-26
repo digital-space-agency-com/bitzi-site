@@ -29,21 +29,44 @@ export const de: Locale = {
     definitionH: "Was ist Bitzi?",
     definition:
       "Bitzi ist eine mobile App für Erwachsene, die Kinder von 1,5 bis 7 Jahren begleiten, und hilft dir, einen altersgerechten Teller zu servieren und das Essen ruhig und bildschirmfrei zu halten. Du fotografierst den Teller für eine grobe, freundliche Orientierung und hältst am Ende der Mahlzeit das Handy hin für eine kurze Feier dessen, was heute der Erfolg war: etwas probieren, am Tisch sitzen oder essen.",
-    stepsH: "So funktioniert es",
-    steps: [
-      {
+    scenes: {
+      dotsLabel: "Szenen",
+      labels: { hero: "Willkommen", meet: "Die Bitzis", plate: "Teller-Check", table: "Tisch ohne Bildschirm", chaining: "Food Chaining", celebration: "Feier", closing: "Bitzi holen" },
+      heroPrimary: "So funktioniert es",
+      heroSecondary: "Häufige Fragen",
+      meet: {
+        h: "Triff die Bitzis",
+        p: "Fünf freundliche Essensfiguren leisten deinem Kind am Tisch Gesellschaft. Sie verlangen nie etwas. Sie sind einfach da und feuern an.",
+        cast: [
+          { id: "pip", name: "Pip", bio: "Eine Erbsenschote, die neugierig auf alles auf dem Teller ist." },
+          { id: "tomo", name: "Tomo", bio: "Eine runde Tomate, die gern winkt." },
+          { id: "bram", name: "Bram", bio: "Ein Brokkoli, der alles lieber Schritt für Schritt angeht." },
+          { id: "pearl", name: "Pearl", bio: "Eine Birne, die am liebsten mit der ganzen Familie am Tisch sitzt." },
+          { id: "dot", name: "Dot", bio: "Eine kleine Muschelnudel, die jeden mutigen Versuch anfeuert." },
+        ],
+      },
+      plate: {
         h: "Teller prüfen",
-        p: "Mach vor dem Servieren ein Foto vom Teller. Bitzi erkennt Gemüse, Eiweiß und Sättigungsbeilage und gibt dir eine grobe Orientierung, was zum Alter deines Kindes passt.",
+        p: "Mach vor dem Servieren ein Foto vom Teller. Bitzi erkennt Gemüse, Eiweiß und Sättigungsbeilage und gibt dir eine grobe, freundliche Orientierung, was zum Alter passt. Ein Anhaltspunkt, keine Vorschrift: Du entscheidest, was auf den Teller kommt, dein Kind entscheidet, wie viel es isst.",
       },
-      {
-        h: "Gemeinsam essen, Handy weg",
-        p: "Leg das Handy mit dem Display nach unten und genießt die Mahlzeit. Am Tisch gibt es keine Bildschirme.",
+      table: {
+        h: "Ein Tisch ohne Bildschirm",
+        p: "Leg das Handy mit dem Display nach unten und genießt die Mahlzeit gemeinsam. Keine Bildschirme am Tisch, für niemanden.",
       },
-      {
+      chaining: {
+        h: "Ein kleiner Schritt nach dem anderen",
+        p: "Dein Kind isst nur wenige Lebensmittel? Bitzi schlägt ähnliche Lebensmittel zum Ausprobieren vor, von einem Liebling zu einem nahen Verwandten mit ähnlichem Geschmack oder ähnlicher Konsistenz.",
+        chips: ["Ein vertrautes Lebensmittel", "Ein naher Verwandter", "Der nächste kleine Schritt"],
+      },
+      celebration: {
         h: "Den Versuch feiern",
-        p: "Danach hältst du das Handy hin, und dein Kind tippt auf den großen Knopf für eine kurze Feier mit einer freundlichen Figur.",
+        p: "Nach dem Essen hältst du das Handy hin, und dein Kind tippt auf den großen Knopf für eine kurze Feier mit einer freundlichen Figur. Sie würdigt, was heute der Erfolg war: etwas probieren, am Tisch sitzen oder essen.",
       },
-    ],
+      closing: {
+        h: "Mach die nächste Mahlzeit ein bisschen leichter",
+        p: "Bitzi kommt bald in den App Store und zu Google Play.",
+      },
+    },
     principlesH: "Was uns bei Mahlzeiten wichtig ist",
     principles: [
       {

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaqList } from "./Faq";
+import { Scenes } from "./Scenes";
 import { locales, type Page } from "../seo/pages";
 import { articles, guidesIndex } from "../content/articles";
 import { compare } from "../content/compare";
@@ -27,46 +28,32 @@ export function Home({ page }: { page: Page }) {
   const h = l.home;
   return (
     <>
-      <section className="hero">
-        <h1>{h.h1}</h1>
-        <p className="lede">{h.lede}</p>
-        <p className="status">{l.ui.notReleased}</p>
-      </section>
-      <section className="definition" aria-labelledby="what">
-        <h2 id="what">{h.definitionH}</h2>
-        <p>{h.definition}</p>
-      </section>
-      <section>
-        <h2>{h.stepsH}</h2>
-        <ol className="cards">
-          {h.steps.map((s) => (
-            <li key={s.h}><h3>{s.h}</h3><p>{s.p}</p></li>
-          ))}
-        </ol>
-      </section>
-      <section>
-        <h2>{h.principlesH}</h2>
-        <div className="grid">
-          {h.principles.map((p) => (
-            <div key={p.h} className="card"><h3>{p.h}</h3><p>{p.p}</p></div>
-          ))}
-        </div>
-      </section>
-      <section>
-        <h2>{h.limitsH}</h2>
-        <ul>{h.limits.map((x) => <li key={x}>{x}</li>)}</ul>
-      </section>
-      <section>
-        <h2>{h.faqH}</h2>
-        <FaqList items={l.faq.items.slice(0, 4)} />
-        <p><Link to={l.paths.faq}>{h.faqCta}</Link></p>
-      </section>
-      {h.more && (
+      <Scenes l={l} />
+      <div className="wrap details">
         <section>
-          <h2>{h.moreH}</h2>
-          <ul>{h.more.map((m) => <li key={m.path}><Link to={m.path}>{m.label}</Link></li>)}</ul>
+          <h2>{h.principlesH}</h2>
+          <div className="grid">
+            {h.principles.map((p) => (
+              <div key={p.h} className="card"><h3>{p.h}</h3><p>{p.p}</p></div>
+            ))}
+          </div>
         </section>
-      )}
+        <section>
+          <h2>{h.limitsH}</h2>
+          <ul>{h.limits.map((x) => <li key={x}>{x}</li>)}</ul>
+        </section>
+        <section>
+          <h2>{h.faqH}</h2>
+          <FaqList items={l.faq.items.slice(0, 4)} />
+          <p><Link to={l.paths.faq}>{h.faqCta}</Link></p>
+        </section>
+        {h.more && (
+          <section>
+            <h2>{h.moreH}</h2>
+            <ul>{h.more.map((m) => <li key={m.path}><Link to={m.path}>{m.label}</Link></li>)}</ul>
+          </section>
+        )}
+      </div>
     </>
   );
 }

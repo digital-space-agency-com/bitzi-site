@@ -18,7 +18,7 @@ export function Layout({ page, children }: { page: Page; children: ReactNode }) 
     <>
       <a className="skip" href="#main">{l.ui.skip}</a>
       <header className="site-header">
-        <div className="wrap bar">
+        <div className="wrap bar glass">
           <Link to={l.paths.home} className="brand" aria-label="Bitzi">
             Bit<span>zi</span>
           </Link>
@@ -47,7 +47,7 @@ export function Layout({ page, children }: { page: Page; children: ReactNode }) 
           )}
         </div>
       </header>
-      <main id="main" className="wrap">{children}</main>
+      <main id="main" className={page.kind === "home" ? "home" : "wrap"}>{children}</main>
       <footer className="site-footer">
         <div className="wrap">
           <p><strong>{l.ui.footerTitle}</strong> {APP_STORE_URL || PLAY_STORE_URL ? null : l.ui.notReleased}</p>

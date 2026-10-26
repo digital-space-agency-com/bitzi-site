@@ -36,3 +36,13 @@ hreflang pairs (en-GB, es-ES, de-DE, x-default = en-GB) on the three translated 
 
 ## Not done
 No deploy, no domain purchase, no OpenSEO or paid tool calls, no indexing requests, no rank or AI-visibility baseline (needs a live site and your approval of costs). `llms.txt` effect is unverified.
+
+## Scroll-scene home page
+
+The home page is a sequence of scroll-scrubbed scenes (hills hero, meet the Bitzis, plate check, screen-free table, food chaining portal, celebration, closing). Headlines and copy are real HTML; video is decoration only.
+
+- Engine: `src/lib/scrollEngine.ts` sets `--p` (0 to 1) per scene; CSS does the parallax and card slide-ins.
+- Placeholders are pure CSS until you supply assets. To swap one in, add files to `public/assets/` and set `"enabled": true` in `public/assets/manifest.json`. No code changes.
+- `prefers-reduced-motion`, no-JS and prerendered HTML get a static stacked layout; Data Saver gets posters.
+- Prompts, filenames, resolutions and encoding commands: [ASSET-BRIEF.md](ASSET-BRIEF.md).
+- Not verified: the Dribbble reference video could not be opened in the browser pane (blocked by the permission classifier), so the look follows the written scene description, not frames of the video.

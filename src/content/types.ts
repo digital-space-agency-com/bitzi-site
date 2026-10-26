@@ -2,6 +2,20 @@ export type Faq = { q: string; a: string };
 export type Section = { h: string; p?: string[]; ul?: string[] };
 export type Source = { label: string; url: string; note?: string };
 
+export type SceneCopy = { h: string; p: string };
+export type Scenes = {
+  dotsLabel: string;
+  labels: Record<"hero" | "meet" | "plate" | "table" | "chaining" | "celebration" | "closing", string>;
+  heroPrimary: string;
+  heroSecondary: string;
+  meet: SceneCopy & { cast: { id: string; name: string; bio: string }[] };
+  plate: SceneCopy;
+  table: SceneCopy;
+  chaining: SceneCopy & { chips: [string, string, string] };
+  celebration: SceneCopy;
+  closing: SceneCopy;
+};
+
 export type Locale = {
   lang: "en" | "es" | "de";
   hreflang: "en-GB" | "es-ES" | "de-DE";
@@ -26,8 +40,7 @@ export type Locale = {
     lede: string;
     definitionH: string;
     definition: string;
-    stepsH: string;
-    steps: { h: string; p: string }[];
+    scenes: Scenes;
     principlesH: string;
     principles: { h: string; p: string }[];
     limitsH: string;

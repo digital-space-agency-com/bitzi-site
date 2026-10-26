@@ -33,21 +33,44 @@ export const en: Locale = {
     definitionH: "What is Bitzi?",
     definition:
       "Bitzi is a parent-held mobile app for children aged 18 months to 7 years that helps you serve a plate that suits their age and keep the meal calm and screen-free. You take a photo of the plate for a rough, friendly guide, then at the end of the meal you hold up the phone for a short celebration of whatever today's win was: trying something, sitting at the table or eating.",
-    stepsH: "How it works",
-    steps: [
-      {
+    scenes: {
+      dotsLabel: "Scenes",
+      labels: { hero: "Welcome", meet: "Meet the Bitzis", plate: "Plate check", table: "Screen-free table", chaining: "Food chaining", celebration: "Celebration", closing: "Get Bitzi" },
+      heroPrimary: "See how it works",
+      heroSecondary: "Read the FAQ",
+      meet: {
+        h: "Meet the Bitzis",
+        p: "Five friendly food characters keep your child company at the table. They never ask for anything. They just turn up and cheer.",
+        cast: [
+          { id: "pip", name: "Pip", bio: "A pea pod who is curious about everything on the plate." },
+          { id: "tomo", name: "Tomo", bio: "A round tomato who loves a good wave hello." },
+          { id: "bram", name: "Bram", bio: "A broccoli who likes to take things one small step at a time." },
+          { id: "pearl", name: "Pearl", bio: "A pear who is happiest sitting down with the whole family." },
+          { id: "dot", name: "Dot", bio: "A little pasta shell who cheers for every brave try." },
+        ],
+      },
+      plate: {
         h: "Check the plate",
-        p: "Take a photo of the plate before you serve it. Bitzi spots the veg, protein and carbs and gives a rough idea of what suits a child of their age.",
+        p: "Take a photo of the plate before you serve it. Bitzi spots the veg, protein and carbs and gives a rough, friendly idea of what suits a child of their age. A guide, not a rule: you choose what goes on the plate, your child chooses how much to eat.",
       },
-      {
-        h: "Eat together, phone down",
-        p: "Put the phone face down and enjoy the meal. There are no screens at the table.",
+      table: {
+        h: "A screen-free table",
+        p: "Put the phone face down and enjoy the meal together. No screens at the table, for anyone.",
       },
-      {
+      chaining: {
+        h: "One small step at a time",
+        p: "Child only eats a few foods? Bitzi suggests ideas for similar foods to try next, moving from a favourite to a close cousin with a similar taste or texture.",
+        chips: ["A food they know", "A close cousin", "The next small step"],
+      },
+      celebration: {
         h: "Celebrate the effort",
-        p: "Afterwards, hold up the phone and let your child tap the big button for a short celebration with a friendly character.",
+        p: "At the end of the meal, hold up the phone and let your child tap the big button for a short celebration with a friendly character. It marks whatever today's win was: trying something, sitting at the table or eating.",
       },
-    ],
+      closing: {
+        h: "Make the next mealtime a little easier",
+        p: "Bitzi is coming soon to the App Store and Google Play.",
+      },
+    },
     principlesH: "What we believe about mealtimes",
     principles: [
       {
