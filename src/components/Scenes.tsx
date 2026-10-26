@@ -13,6 +13,7 @@ function Media({ id, m }: { id: SceneId; m: Manifest | null }) {
   const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const small = matchMedia("(max-width: 700px)").matches;
   const poster = e.poster ? ASSET_BASE + e.poster : undefined;
+  if (e.mode === "still" || !e.mp4) return poster ? <img className="media still" src={poster} alt="" /> : null;
   if (reduce || (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData) {
     return poster ? <img className="media" src={poster} alt="" /> : null;
   }

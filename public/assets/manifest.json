@@ -1,61 +1,40 @@
 {
-  "_readme": "Set enabled:true on a slot once its files exist in this folder. Paths are relative to /assets/. No code changes needed. See ASSET-BRIEF.md.",
+  "_readme": "Scenes are still images with scroll-driven pan/zoom (mode still). To use video later, set mode loop/scrub and add mp4/webm/mobile. Paths relative to /assets/.",
   "version": 1,
   "scenes": {
     "hero": {
       "enabled": true,
-      "mode": "loop",
-      "mp4": "scenes/hero.mp4",
-      "webm": "scenes/hero.webm",
-      "mobile": "scenes/hero-m.mp4",
-      "poster": "scenes/hero-poster.jpg"
+      "mode": "still",
+      "poster": "scenes/hero-wide.jpg"
     },
     "meet": {
-      "enabled": false,
-      "mode": "loop",
-      "mp4": "scenes/meet.mp4",
-      "webm": "scenes/meet.webm",
-      "mobile": "scenes/meet-m.mp4",
+      "enabled": true,
+      "mode": "still",
       "poster": "scenes/meet-poster.jpg"
     },
     "plate": {
-      "enabled": false,
-      "mode": "scrub",
-      "mp4": "scenes/plate.mp4",
-      "webm": "scenes/plate.webm",
-      "mobile": "scenes/plate-m.mp4",
+      "enabled": true,
+      "mode": "still",
       "poster": "scenes/plate-poster.jpg"
     },
     "table": {
-      "enabled": false,
-      "mode": "scrub",
-      "mp4": "scenes/table.mp4",
-      "webm": "scenes/table.webm",
-      "mobile": "scenes/table-m.mp4",
+      "enabled": true,
+      "mode": "still",
       "poster": "scenes/table-poster.jpg"
     },
     "chaining": {
-      "enabled": false,
-      "mode": "scrub",
-      "mp4": "scenes/chaining.mp4",
-      "webm": "scenes/chaining.webm",
-      "mobile": "scenes/chaining-m.mp4",
+      "enabled": true,
+      "mode": "still",
       "poster": "scenes/chaining-poster.jpg"
     },
     "celebration": {
-      "enabled": false,
-      "mode": "scrub",
-      "mp4": "scenes/celebration.mp4",
-      "webm": "scenes/celebration.webm",
-      "mobile": "scenes/celebration-m.mp4",
+      "enabled": true,
+      "mode": "still",
       "poster": "scenes/celebration-poster.jpg"
     },
     "closing": {
-      "enabled": false,
-      "mode": "scrub",
-      "mp4": "scenes/closing.mp4",
-      "webm": "scenes/closing.webm",
-      "mobile": "scenes/closing-m.mp4",
+      "enabled": true,
+      "mode": "still",
       "poster": "scenes/closing-poster.jpg"
     }
   },

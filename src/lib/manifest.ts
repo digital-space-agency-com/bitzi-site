@@ -1,5 +1,5 @@
 export type SceneId = "hero" | "meet" | "plate" | "table" | "chaining" | "celebration" | "closing";
-export type MediaEntry = { enabled?: boolean; mode?: "scrub" | "loop"; mp4?: string; webm?: string; mobile?: string; poster?: string };
+export type MediaEntry = { enabled?: boolean; mode?: "scrub" | "loop" | "still"; mp4?: string; webm?: string; mobile?: string; poster?: string };
 export type CharEntry = { enabled?: boolean; src: string; alt?: string };
 export type Manifest = { scenes: Partial<Record<SceneId, MediaEntry>>; characters: Record<string, CharEntry> };
 
