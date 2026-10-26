@@ -388,3 +388,9 @@ main.home { margin-top: var(--fr); }
 .site-footer { padding-top: 1.5rem; }
 .site-footer { padding-inline: 0; }
 .foot-card { width: calc(100% - 2 * (var(--fr) + var(--gm))); }
+
+/* even vertical rhythm: frame, panels and footer share one gap */
+.wrap.details { padding: 1.25rem 0 0; }
+.site-footer { padding: 1.25rem 0 var(--fr); }
+.details > section h2 { margin-top: 0; }
+.details > section > :last-child { margin-bottom: 0; }
