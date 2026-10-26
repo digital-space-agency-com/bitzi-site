@@ -61,18 +61,25 @@ export function Layout({ page, children }: { page: Page; children: ReactNode }) 
       </header>
       <main id="main" className={page.kind === "home" ? "home" : "wrap"}>{children}</main>
       <footer className="site-footer">
-        <div className="wrap">
-          <p>{APP_STORE_URL || PLAY_STORE_URL ? <strong>{l.ui.footerTitle}</strong> : <><strong>{l.ui.footerTitle}</strong>{" · "}{l.ui.notReleased}</>}</p>
+        <div className="foot-card">
+          <ul className="foot-cast" aria-hidden="true">
+            {["pip", "tomo", "bram", "sun", "pearl", "dot"].map((c) => (
+              <li key={c}><img src={`/assets/characters/${c}.webp`} alt="" loading="lazy" decoding="async" /></li>
+            ))}
+          </ul>
+          <p className="foot-title">
+            <Link to={l.paths.home} className="brand" aria-label="Bitzi">Bit<span>zi</span></Link>
+            {!(APP_STORE_URL || PLAY_STORE_URL) && <span className="foot-soon">{l.ui.notReleased}</span>}
+          </p>
+          <nav aria-label={l.ui.footerTitle} className="foot-links">
+            <ul>
+              {nav.map((n) => (
+                <li key={n.to}><Link to={n.to}>{n.label}</Link></li>
+              ))}
+            </ul>
+          </nav>
           <p className="small">{l.ui.footerNote}</p>
           {l.ui.onlyEnglish && <p className="small">{l.ui.onlyEnglish}</p>}
-          <p className="small">
-            {nav.map((n, i) => (
-              <span key={n.to}>
-                {i > 0 && " · "}
-                <Link to={n.to}>{n.label}</Link>
-              </span>
-            ))}
-          </p>
         </div>
       </footer>
     </>

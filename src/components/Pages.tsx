@@ -45,12 +45,12 @@ export function Home({ page }: { page: Page }) {
         <section>
           <h2>{h.faqH}</h2>
           <FaqList items={l.faq.items.slice(0, 4)} />
-          <p><Link to={l.paths.faq}>{h.faqCta}</Link></p>
+          <p><Link className="pill-link" to={l.paths.faq}>{h.faqCta}</Link></p>
         </section>
         {h.more && (
           <section>
             <h2>{h.moreH}</h2>
-            <ul>{h.more.map((m) => <li key={m.path}><Link to={m.path}>{m.label}</Link></li>)}</ul>
+            <ul className="more-links">{h.more.map((m) => <li key={m.path}><Link to={m.path}>{m.label}</Link></li>)}</ul>
           </section>
         )}
       </div>
