@@ -2,20 +2,93 @@
   "_readme": "Set enabled:true on a slot once its files exist in this folder. Paths are relative to /assets/. No code changes needed. See ASSET-BRIEF.md.",
   "version": 1,
   "scenes": {
-    "hero":        { "enabled": false, "mode": "loop",  "mp4": "scenes/hero.mp4",        "webm": "scenes/hero.webm",        "mobile": "scenes/hero-m.mp4",        "poster": "scenes/hero-poster.jpg" },
-    "meet":        { "enabled": false, "mode": "loop",  "mp4": "scenes/meet.mp4",        "webm": "scenes/meet.webm",        "mobile": "scenes/meet-m.mp4",        "poster": "scenes/meet-poster.jpg" },
-    "plate":       { "enabled": false, "mode": "scrub", "mp4": "scenes/plate.mp4",       "webm": "scenes/plate.webm",       "mobile": "scenes/plate-m.mp4",       "poster": "scenes/plate-poster.jpg" },
-    "table":       { "enabled": false, "mode": "scrub", "mp4": "scenes/table.mp4",       "webm": "scenes/table.webm",       "mobile": "scenes/table-m.mp4",       "poster": "scenes/table-poster.jpg" },
-    "chaining":    { "enabled": false, "mode": "scrub", "mp4": "scenes/chaining.mp4",    "webm": "scenes/chaining.webm",    "mobile": "scenes/chaining-m.mp4",    "poster": "scenes/chaining-poster.jpg" },
-    "celebration": { "enabled": false, "mode": "scrub", "mp4": "scenes/celebration.mp4", "webm": "scenes/celebration.webm", "mobile": "scenes/celebration-m.mp4", "poster": "scenes/celebration-poster.jpg" },
-    "closing":     { "enabled": false, "mode": "scrub", "mp4": "scenes/closing.mp4",     "webm": "scenes/closing.webm",     "mobile": "scenes/closing-m.mp4",     "poster": "scenes/closing-poster.jpg" }
+    "hero": {
+      "enabled": false,
+      "mode": "loop",
+      "mp4": "scenes/hero.mp4",
+      "webm": "scenes/hero.webm",
+      "mobile": "scenes/hero-m.mp4",
+      "poster": "scenes/hero-poster.jpg"
+    },
+    "meet": {
+      "enabled": false,
+      "mode": "loop",
+      "mp4": "scenes/meet.mp4",
+      "webm": "scenes/meet.webm",
+      "mobile": "scenes/meet-m.mp4",
+      "poster": "scenes/meet-poster.jpg"
+    },
+    "plate": {
+      "enabled": false,
+      "mode": "scrub",
+      "mp4": "scenes/plate.mp4",
+      "webm": "scenes/plate.webm",
+      "mobile": "scenes/plate-m.mp4",
+      "poster": "scenes/plate-poster.jpg"
+    },
+    "table": {
+      "enabled": false,
+      "mode": "scrub",
+      "mp4": "scenes/table.mp4",
+      "webm": "scenes/table.webm",
+      "mobile": "scenes/table-m.mp4",
+      "poster": "scenes/table-poster.jpg"
+    },
+    "chaining": {
+      "enabled": false,
+      "mode": "scrub",
+      "mp4": "scenes/chaining.mp4",
+      "webm": "scenes/chaining.webm",
+      "mobile": "scenes/chaining-m.mp4",
+      "poster": "scenes/chaining-poster.jpg"
+    },
+    "celebration": {
+      "enabled": false,
+      "mode": "scrub",
+      "mp4": "scenes/celebration.mp4",
+      "webm": "scenes/celebration.webm",
+      "mobile": "scenes/celebration-m.mp4",
+      "poster": "scenes/celebration-poster.jpg"
+    },
+    "closing": {
+      "enabled": false,
+      "mode": "scrub",
+      "mp4": "scenes/closing.mp4",
+      "webm": "scenes/closing.webm",
+      "mobile": "scenes/closing-m.mp4",
+      "poster": "scenes/closing-poster.jpg"
+    }
   },
   "characters": {
-    "pip":   { "enabled": false, "src": "characters/pip.webp",   "alt": "Pip, a felted pea pod" },
-    "tomo":  { "enabled": false, "src": "characters/tomo.webp",  "alt": "Tomo, a felted tomato" },
-    "bram":  { "enabled": false, "src": "characters/bram.webp",  "alt": "Bram, a felted broccoli" },
-    "pearl": { "enabled": false, "src": "characters/pearl.webp", "alt": "Pearl, a felted pear" },
-    "sun":   { "enabled": false, "src": "characters/sun.webp",   "alt": "A felted smiling sun" },
-    "dot":   { "enabled": false, "src": "characters/dot.webp",   "alt": "Dot, a felted pasta shell" }
+    "pip": {
+      "enabled": true,
+      "src": "characters/pip.webp",
+      "alt": "Pip, a felted pea pod"
+    },
+    "tomo": {
+      "enabled": true,
+      "src": "characters/tomo.webp",
+      "alt": "Tomo, a felted tomato"
+    },
+    "bram": {
+      "enabled": true,
+      "src": "characters/bram.webp",
+      "alt": "Bram, a felted broccoli"
+    },
+    "pearl": {
+      "enabled": true,
+      "src": "characters/pearl.webp",
+      "alt": "Pearl, a felted pear"
+    },
+    "sun": {
+      "enabled": true,
+      "src": "characters/sun.webp",
+      "alt": "A felted smiling sun"
+    },
+    "dot": {
+      "enabled": true,
+      "src": "characters/dot.webp",
+      "alt": "Dot, a felted pasta shell"
+    }
   }
 }
