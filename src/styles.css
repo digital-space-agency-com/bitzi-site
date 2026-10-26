@@ -328,3 +328,4 @@ main.home { margin-top: var(--fr); }
   .site-header .side { overflow-x: auto; }
   .past-home .site-header .bar { border-radius: 22px; padding: 6px 10px; top: 6px; }
 }
+.sun-slot .char.img { width: auto; height: 3.9em; object-fit: contain; border-radius: 0; vertical-align: middle; filter: drop-shadow(0 4px 8px rgba(11,28,5,.3)); }
